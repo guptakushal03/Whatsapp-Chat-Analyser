@@ -61,8 +61,6 @@ if  uploaded_file is not None:
             plt.xticks(rotation=45, ha='right')
             st.pyplot(fig)
 
-
-
         if selected_user == 'Entire Chat':
             st.title("Most Active User")
             new_df = helper.most_active_user(df)
