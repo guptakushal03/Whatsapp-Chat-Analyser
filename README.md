@@ -1,7 +1,3 @@
-Here's a sample `README.md` file for your WhatsApp Chat Analyzer application:
-
----
-
 # WhatsApp Chat Analyzer
 
 WhatsApp Chat Analyzer is a tool built with Python and Streamlit that allows users to analyze their WhatsApp chat data. It provides insights such as total messages, word count, media shared, links shared, monthly activity timeline, most active users, activity maps, and word clouds.
@@ -42,7 +38,3 @@ WhatsApp Chat Analyzer is a tool built with Python and Streamlit that allows use
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or feature requests, please open an issue or submit a pull request.
-
----
-
-Feel free to customize the content according to your project's specific features, dependencies, and structure.
