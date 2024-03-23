@@ -3,9 +3,15 @@ from wordcloud import WordCloud
 extract = URLExtract()
 
 def fetch_stats(selected_user, df):
-
     if selected_user != "Entire Chat":
-        df = df[df['user'] == selected_user]
+        filtered_df = df[df['user'] == selected_user]
+        if filtered_df.empty:
+            return 0, 0, 0, 0, None
+        else:
+            df = filtered_df
+
+    if 'date' not in df.columns:
+        return 0, 0, 0, 0, None
 
     num_messages = df.shape[0]
     
@@ -18,8 +24,10 @@ def fetch_stats(selected_user, df):
     links = []
     for message in df['message']:
         links.extend(extract.find_urls(message))
+    
+    formatted_date = df['date'].dt.strftime("%m-%d-%Y").head(1).iloc[0]
 
-    return num_messages, len(words), num_media_messages, len(links)
+    return num_messages, len(words), num_media_messages, len(links), formatted_date
 
 def most_active_user(df):
     df = round((df['user'].value_counts()/df.shape[0])*100,2).reset_index().rename(columns={'index':'Name', 'user': 'Percent'})
