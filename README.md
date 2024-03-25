@@ -38,3 +38,7 @@ WhatsApp Chat Analyzer is a tool built with Python and Streamlit that allows use
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or feature requests, please open an issue or submit a pull request.
+
+## Note
+
+The deployed version of this project is not fully functional as uploading files on the server is not allowed to prevent data leaks. The project works perfectly fine on localhost!
