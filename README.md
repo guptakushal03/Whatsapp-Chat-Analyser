@@ -42,3 +42,8 @@ Contributions are welcome! If you have any ideas, suggestions, or feature reques
 ## Note
 
 The deployed version of this project is not fully functional as uploading files on the server is not allowed to prevent data leaks. The project works perfectly fine on localhost!
+
+---
+
+## License
+This project is open-source and available under the MIT License.
